@@ -242,6 +242,13 @@ MonoBehaviour:
   Player: {fileID: 1673885359}
   slowKamikaze: {fileID: 226243985047757385, guid: 630e27f8a77702ca38cdebf402426ab0, type: 3}
   fastKamikaze: {fileID: 5489720437911064733, guid: fd78971d2aa2d4aa1b6a61702ed7d3ef, type: 3}
+  slowShooting: {fileID: 59257976450270234, guid: 330325ff985ed9501b9879fc106f0e63, type: 3}
+  slowFastShooting: {fileID: 1411511905977496000, guid: 9a2185731c4eeed8e9d8b0c6d04ea795, type: 3}
+  fastShooting: {fileID: 1603558239172268684, guid: f35311dfd5495c112acb16b445cb7f87, type: 3}
+  shotgun: {fileID: 6148501283875632593, guid: c2c1e070843d915adbe2aa8d42699e86, type: 3}
+  zigzagFastShooting: {fileID: 1196927053661531585, guid: c08673ceec370305a93d94d4a530b548, type: 3}
+  zigzagShotgun: {fileID: 734868886919863319, guid: 49183ff8fa8aae449aa5d822b1794f26, type: 3}
+  madness: {fileID: 500781254024708704, guid: 6d783286be25296ce813a1c956f58f1c, type: 3}
 --- !u!1 &702997061
 GameObject:
   m_ObjectHideFlags: 0

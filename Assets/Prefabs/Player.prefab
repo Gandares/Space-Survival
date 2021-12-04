@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2058823432498995120}
   - component: {fileID: 2058823432498995123}
   - component: {fileID: 2058823432498995122}
-  - component: {fileID: 2058823432498995125}
+  - component: {fileID: 3064027007104803445}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allyBullet: {fileID: 0}
---- !u!61 &2058823432498995125
-BoxCollider2D:
+  FirePoint: {fileID: 0}
+--- !u!68 &3064027007104803445
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,18 +113,16 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.64, y: -0.6372094}
+  - {x: 0.64010584, y: -0.6372094}
+  - {x: 0.0026587918, y: 0.64006853}
+  - {x: -0.6344187, y: -0.6314163}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &2960769270575252135
 GameObject:
   m_ObjectHideFlags: 0
