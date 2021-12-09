@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
     private bool canShoot = true;
     private float delayInSeconds = 0.6f;
     private int life = 3;
+    private CanvasScript c;
+
+    void Start() {
+        c = GameObject.FindWithTag("Canvas").GetComponent<CanvasScript>();
+    }
 
     void Update()
     {
@@ -50,6 +55,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyBullet"){
             life--;
+            c.setLifes(life);
             Debug.Log(life);
         }
     }

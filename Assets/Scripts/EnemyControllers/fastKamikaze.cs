@@ -5,7 +5,11 @@ using UnityEngine;
 public class fastKamikaze : MonoBehaviour
 {
     private float speed = 2f;
+    private CanvasScript c;
+    private int puntuation = 60;
+
     void Start(){
+        c = GameObject.FindWithTag("Canvas").GetComponent<CanvasScript>();
         Destroy(gameObject, 10);
     }
 
@@ -15,6 +19,7 @@ public class fastKamikaze : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "AllyBullet"){
+            c.setPoints(puntuation);
             Destroy(gameObject);
         }
     }

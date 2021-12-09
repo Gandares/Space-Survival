@@ -9,8 +9,11 @@ public class shotgun : MonoBehaviour
     private float reload = 3f;
     private float speed = 1f;
     private bool canShoot = true;
+    private CanvasScript c;
+    private int puntuation = 200;
 
     void Start(){
+        c = GameObject.FindWithTag("Canvas").GetComponent<CanvasScript>();
         Destroy(gameObject, 10);
     }
 
@@ -28,6 +31,7 @@ public class shotgun : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "AllyBullet"){
+            c.setPoints(puntuation);
             Destroy(gameObject);
         }
     }

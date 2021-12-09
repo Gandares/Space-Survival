@@ -11,8 +11,11 @@ public class zigzagFastShooting : MonoBehaviour
     private float speed = 1f;
     private bool canShoot = true;
     private bool leftRight = true;
+    private CanvasScript c;
+    private int puntuation = 220;
 
     void Start(){
+        c = GameObject.FindWithTag("Canvas").GetComponent<CanvasScript>();
         Destroy(gameObject, 8);
     }
 
@@ -40,6 +43,7 @@ public class zigzagFastShooting : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "AllyBullet"){
+            c.setPoints(puntuation);
             Destroy(gameObject);
         }
     }

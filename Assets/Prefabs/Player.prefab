@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f017a8573b6d578eab63c17deec1bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allyBullet: {fileID: 0}
-  FirePoint: {fileID: 0}
+  allyBullet: {fileID: 528642004656643371, guid: d7cb6c1d55416963b9c90bb9b05699fa, type: 3}
+  FirePoint: {fileID: 5186468887280633365}
+  c: {fileID: 2509067675696106055, guid: 2978b058efd8ac0ea8bbd77b0dea694a, type: 3}
 --- !u!68 &3064027007104803445
 EdgeCollider2D:
   m_ObjectHideFlags: 0

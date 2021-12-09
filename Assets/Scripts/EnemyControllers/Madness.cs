@@ -11,8 +11,11 @@ public class Madness : MonoBehaviour
     private float speed = 1f;
     private bool canShoot = true;
     private bool leftRight = true;
+    private CanvasScript c;
+    private int puntuation = 500;
 
     void Start(){
+        c = GameObject.FindWithTag("Canvas").GetComponent<CanvasScript>();
         Destroy(gameObject, 7.4f);
     }
 
@@ -54,6 +57,7 @@ public class Madness : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "AllyBullet"){
+            c.setPoints(puntuation);
             Destroy(gameObject);
         }
     }

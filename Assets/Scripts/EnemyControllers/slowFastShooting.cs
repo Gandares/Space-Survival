@@ -9,10 +9,12 @@ public class slowFastShooting : MonoBehaviour
     private float reload = 1f;
     private float speed = 1f;
     private bool canShoot = true;
+    private CanvasScript c;
+    private int puntuation = 110;
 
     void Start(){
+        c = GameObject.FindWithTag("Canvas").GetComponent<CanvasScript>();
         Destroy(gameObject, 10);
-        StartCoroutine(ShootDelay());
     }
 
     void Update(){
@@ -26,6 +28,7 @@ public class slowFastShooting : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "AllyBullet"){
+            c.setPoints(puntuation);
             Destroy(gameObject);
         }
     }
