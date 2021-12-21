@@ -30,12 +30,13 @@ public class PlayerController : MonoBehaviour
 
         //Movimiento vertical
 
-        transform.Translate(Vector3.up * passiveUpSpeed * Time.deltaTime);
+        transform.Translate(new Vector3(0,-1,0) * passiveUpSpeed * Time.deltaTime);
 
         // Disparo
 
         if(Input.GetKey(KeyCode.Space) && canShoot == true){
-            Instantiate(allyBullet, FirePoint.position, FirePoint.rotation);
+            Instantiate(allyBullet, FirePoint.position, Quaternion.Euler(0,0,0));
+            Debug.Log("Dispara");
             canShoot = false;
             StartCoroutine(ShootDelay());
         }

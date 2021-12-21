@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
             StartCoroutine(spawnDelay());
         }
 
-        if(faster && delay > 0.8f){
+        if(faster && delay > 1f){
             delay-=0.2f;
             faster = false;
             StartCoroutine(Faster());
