@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -40,12 +41,6 @@ public class PlayerController : MonoBehaviour
             canShoot = false;
             StartCoroutine(ShootDelay());
         }
-
-        // Muerte
-
-        if(life <= 0){
-            Destroy(gameObject);
-        }
     }
 
     IEnumerator ShootDelay(){
@@ -58,6 +53,12 @@ public class PlayerController : MonoBehaviour
             life--;
             c.setLifes(life);
             Debug.Log(life);
+
+            // Muerte
+
+            if(life == 0){
+                SceneManager.LoadScene("Main Menu");
+            }
         }
     }
 }

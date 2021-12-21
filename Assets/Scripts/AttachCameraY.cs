@@ -8,6 +8,9 @@ public class AttachCameraY : MonoBehaviour
     public Transform bg1;
     public Transform bg2;
     private float size;
+    private float lastWidth;
+    private float lastHeight;
+
     void Start()
     {
         Player = GameObject.FindWithTag("Player");
