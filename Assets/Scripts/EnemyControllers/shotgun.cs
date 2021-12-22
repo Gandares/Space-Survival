@@ -11,6 +11,7 @@ public class shotgun : MonoBehaviour
     private bool canShoot = true;
     private CanvasScript c;
     private int puntuation = 200;
+    public ParticleSystem explosion;
 
     void Start(){
         c = GameObject.FindWithTag("Canvas").GetComponent<CanvasScript>();
@@ -31,6 +32,7 @@ public class shotgun : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "AllyBullet"){
+            Instantiate(explosion, this.transform.position + new Vector3(0f,0f,-1f), Quaternion.identity);
             c.setPoints(puntuation);
             Destroy(gameObject);
         }

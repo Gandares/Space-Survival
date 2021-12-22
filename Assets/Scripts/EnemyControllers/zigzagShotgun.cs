@@ -13,6 +13,7 @@ public class zigzagShotgun : MonoBehaviour
     private bool leftRight = true;
     private CanvasScript c;
     private int puntuation = 300;
+    public ParticleSystem explosion;
 
     void Start(){
         c = GameObject.FindWithTag("Canvas").GetComponent<CanvasScript>();
@@ -46,6 +47,7 @@ public class zigzagShotgun : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "AllyBullet"){
+            Instantiate(explosion, this.transform.position + new Vector3(0f,0f,-1f), Quaternion.identity);
             c.setPoints(puntuation);
             Destroy(gameObject);
         }
